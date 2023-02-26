@@ -2,6 +2,10 @@ import express from "express";
 import { client } from "../index.js";
 const router = express.Router();
 
+router.get("/", async function (request, response) {
+  //db.movies.find({})
+  response.send("enter the argument and get data 😀");
+});
 router.get("/allmentors", async function (request, response) {
   //db.movies.find({})
   const movie = await client
